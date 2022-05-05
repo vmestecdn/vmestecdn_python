@@ -8,7 +8,7 @@ UPLOAD_URL = SITE_URL + "/api/upload/"
 INFO_URL = SITE_URL + "/api/info/" 
 DELETE_URL = SITE_URL + "/api/delete/"
 
-class VmestecdnUpload(object):
+class Vmestecdn(object):
     def __init__(self, upload_uuid):
         self.upload_uuid = upload_uuid
 
@@ -49,7 +49,7 @@ class VmestecdnUpload(object):
 
 
 if __name__=="__main__":
-    vcu = VmestecdnUpload("558bec05d73142c5a0d727482e0190f4") # lin
+    vcu = Vmestecdn("558bec05d73142c5a0d727482e0190f4") # lin
     #files = [
     #    "/opt/lapon/media/2022/3/user_5/video/video4.mp4",
     #    "/home/mixolap/temp/in.mp4",
