@@ -6,6 +6,7 @@ import json
 SITE_URL = "https://vmestecdn.site"
 UPLOAD_URL = SITE_URL + "/api/upload/"
 INFO_URL = SITE_URL + "/api/info/" 
+DELETE_URL = SITE_URL + "/api/delete/"
 
 class VmestecdnUpload(object):
     def __init__(self, upload_uuid):
@@ -41,3 +42,24 @@ class VmestecdnUpload(object):
     def info(self, uuid):
         r = requests.get(INFO_URL+uuid)
         return json.loads(r.content.decode("utf-8"))
+
+    def delete(self, uuid):
+        r = requests.get(DELETE_URL+self.upload_uuid+"/"+uuid)
+        return json.loads(r.content.decode("utf-8"))
+
+
+if __name__=="__main__":
+    vcu = VmestecdnUpload("2d8a7f5159a349b2988e7abec3e7233b") # lin
+    # 39ce0adb71684e57bb666cc94dc94d3d
+    #files = [
+    #    "/opt/lapon/media/2022/3/user_5/video/video4.mp4",
+    #    "/home/mixolap/temp/in.mp4",
+    #]
+
+    
+
+    print(vcu.info("098bec05d73842c5a0d727482e0190f4"))
+    #print(vcu.delete("098bec05d73842c5a0d727482e0190f4"))
+    # for f in files:
+    #     if os.path.exists(f):
+    #         print(vcu.upload_file(f))
