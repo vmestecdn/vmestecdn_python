@@ -49,8 +49,7 @@ class VmestecdnUpload(object):
 
 
 if __name__=="__main__":
-    vcu = VmestecdnUpload("2d8a7f5159a349b2988e7abec3e7233b") # lin
-    # 39ce0adb71684e57bb666cc94dc94d3d
+    vcu = VmestecdnUpload("558bec05d73142c5a0d727482e0190f4") # lin
     #files = [
     #    "/opt/lapon/media/2022/3/user_5/video/video4.mp4",
     #    "/home/mixolap/temp/in.mp4",
