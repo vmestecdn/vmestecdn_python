@@ -9,11 +9,11 @@
 ## Функции
 ### Подключение
 ```python
-from vmestecdn_upload import VmestecdnUpload
+from vmestecdn import Vmestecdn
 ```
 ### Загрузка видео
 ```python
-vcu = VmestecdnUpload("your_token") # токен из вашего личного кабинета
+vcu = Vmestecdn("your_token") # токен из вашего личного кабинета
 # загрузить свой файл
 uuid = vcu.upload_file("/path/to/file.avi") # вернется идентификатор загруженного файла
 ```
