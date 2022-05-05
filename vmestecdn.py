@@ -41,18 +41,3 @@ class VmestecdnUpload(object):
     def info(self, uuid):
         r = requests.get(INFO_URL+uuid)
         return json.loads(r.content.decode("utf-8"))
-
-
-if __name__=="__main__":
-    vcu = VmestecdnUpload("39ce0adb71684e57bb666cc94dc94d3d") # lin
-    vcu = VmestecdnUpload("5b0c8c7d64214ff2a1ba483b1f3aa9de") # mac
-    # 39ce0adb71684e57bb666cc94dc94d3d
-    files = [
-        "/opt/lapon/media/2022/3/user_5/video/video4.mp4",
-        "/home/mixolap/temp/in.mp4",
-    ]
-
-    print(vcu.info("aee00cd9caab4d468b3a0508e11f5aba"))
-    # for f in files:
-    #     if os.path.exists(f):
-    #         print(vcu.upload_file(f))
